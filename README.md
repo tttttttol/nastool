@@ -9,3 +9,7 @@
 
 执行脚本：
  bash <(curl -sL http://ghproxy.com/https://github.com/tttttttol/nastool/blob/main/nas-tools.sh)
+
+
+特别鸣谢 ：
+https://blog.20120714.xyz/
