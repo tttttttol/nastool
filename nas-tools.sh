@@ -85,7 +85,7 @@ function install_rclone(){
 function install_gclone(){
   if [[ ! -f /usr/bin/gclone ]];then
     echo -e "`curr_date` 正在安装gclone,请稍等..."
-    bash <(curl -sL https://raw.githubusercontent.com/07031218/normal-shell/main/gclone.sh )
+    bash <(curl -sL https://github.com/tttttttol/nastool/blob/main/gclone.sh )
     if [[ -f /usr/bin/rclone ]];then
       sleep 1s
       echo
@@ -534,9 +534,9 @@ function menu(){
     echoContent green "
 ###################################################################
 #                                                                 #
-#           Nas-tools 一键梭哈脚本                                #
-#                    Powerby 翔翎                                 #
-#                    Blog：https://blog.20120714.xyz              #
+#                    Nas-tools 一键脚本                           #
+#                    Powerby tttttttol                            #
+#                    Blog：https://github.com/tttttttol           #
 #                                                                 #
 ###################################################################"
 echoContent red "请注意：不建议内存低于2GB，磁盘空间低于40G的设备执行安装"
