@@ -112,12 +112,21 @@ version: "3"
 services: 
 #自动追剧必备
   nas-tools:
-    image: nastool/nas-tools:latest
+    image: hsuyelin/nas-tools:latest
     ports:
       - 3000:3000
     volumes:
       - /home/nas-tools/config:/config
-      - /downloads:/downloads
+      - /mnt/Downloads/movies:/data/Downloads/movies
+      - /mnt/Downloads/tvshow:/data/Downloads/tvshow
+      - /mnt/Downloads/music:/data/Downloads/music
+      - /mnt/Downloads/others:/data/Downloads/others
+      - /mnt/Downloads/anime:/data/Downloads/anime
+      - /mnt/yunpan/movies:/data/movies
+      - /mnt/yunpan/tvshow:/data/tvshow
+      - /mnt/yunpan/music:/data/music
+      - /mnt/yunpan/others:/data/others
+      - /mnt/yunpan/anime:/data/anime
       - /mnt:/mnt
       - /root/.config/rclone:/root/.config/rclone
     environment: 
@@ -141,6 +150,11 @@ services:
       - WEBUI_PORT=8088
     volumes:
       - /home/qbittorrent/config:/config
+      - /mnt/Downloads/movies:/mnt/Downloads/movies
+      - /mnt/Downloads/tvshow:/mnt/Downloads/tvshow
+      - /mnt/Downloads/music:/mnt/Downloads/music
+      - /mnt/Downloads/others:/mnt/Downloads/others
+      - /mnt/Downloads/anime:/mnt/Downloads/anime
       - /downloads:/downloads
       - /home/qbittorrent/watch:/watch  
     restart: unless-stopped
